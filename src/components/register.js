@@ -65,7 +65,7 @@ export default function Register() {
          <input
            type="text"
            className="form-control"
-           id="firstName"
+           id="lastName"
            value={form.lastName}
            onChange={(e) => updateForm({ lastName: e.target.value })}
          />
