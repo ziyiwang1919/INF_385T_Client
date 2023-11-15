@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router";
 import "bootstrap/dist/css/bootstrap.css";
 //import "bootstrap/dist/css/bootstrap.min.css";
- 
+import configData from "../config.json";
+
 export default function Register() {
  const [form, setForm] = useState({
    firstName: "",
@@ -28,7 +29,7 @@ export default function Register() {
    // When a post request is sent to the create url, we'll add a new record to the database.
    const newUser = { ...form };
  
-   await fetch("http://localhost:5050/register", {
+   await fetch(configData.SERVER_URL+"/register", {
      method: "POST",
      headers: {
        "Content-Type": "application/json",
