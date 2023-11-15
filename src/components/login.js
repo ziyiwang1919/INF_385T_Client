@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
 import "bootstrap/dist/css/bootstrap.css";
-//import "bootstrap/dist/css/bootstrap.min.css";
 
 import configData from "../config.json";
  
@@ -10,9 +9,7 @@ export default function Login() {
    email: "",
    password: "",
  });
- const [authenticated, setauthenticated] = useState(
-  localStorage.getItem(localStorage.getItem("authenticated") || false)
-);
+
  const navigate = useNavigate();
  
  // These methods will update the state properties.
@@ -43,9 +40,7 @@ export default function Login() {
  
    setForm({ email: "", password: "" });
 
-   if (authenticated) {
-    navigate("/home");
-    }
+    navigate("/");
  }
  
  // This following section will display the form that takes the input from the user.

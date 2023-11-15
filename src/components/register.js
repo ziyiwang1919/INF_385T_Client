@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
 import "bootstrap/dist/css/bootstrap.css";
-//import "bootstrap/dist/css/bootstrap.min.css";
+
 import configData from "../config.json";
 
 export default function Register() {
